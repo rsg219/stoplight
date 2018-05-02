@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Stoplight</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="allProjectsPage.js"></script>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="login navbar-right">
+        <div><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></div>
+    </div>
+</div>
+
+<div class="container-fluid" id="projectsWindow">
+    <div>
+        <img src="Images/logoWhite.png" class="center" style="max-height:200px; width:auto; margin-bottom:50px;">
+    </div>
+    <h2>All Projects</h2>
+    <br>
+  <div class="row content">
+    <div class="row" id="projects">
+        <div class="col-sm-3" id="newProject">
+          <div class="well" data-toggle="modal" data-target="#createNewProject">
+            <img src="Images/newproject.png" class="center" alt="Create New Project">
+            <div class="name">Create New Project</div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="well project">
+                <img src="Images/project.png" class="center" alt="Financial Project">
+                <div class="name">Finance Management</div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Upload File Modal -->
+<div id="createNewProject" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Create New Project</h4>
+			</div>
+			<div class="modal-body">
+				<form id="uploadFile" enctype="multipart/form-data" method="POST" action="\project">
+						<label for="projectName">Project Name:</label>
+            <input type="text" class="form-control" id="projectName">
+            <br>
+            <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate">
+            <br>
+            <br>
+            <label for="admins">Admins:</label>
+            <button type="button"><span class="glyphicon glyphicon-plus"></span></button>
+            <input type="text" class="form-control" id="admins">
+            <br>
+            <br>
+            <label for="members">Members:</label>
+            <button type="button"><span class="glyphicon glyphicon-plus"></span></button>
+            <input type="text" class="form-control" id="members">
+            <input type="text" class="form-control" id="members">
+            <input type="text" class="form-control" id="members">
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="container-fluid text-center">
+</footer>
+
+
+</body>
+</html>

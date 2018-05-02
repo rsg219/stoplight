@@ -1,0 +1,288 @@
+html, body {
+    height: 100%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 100%;}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+.fill {
+    min-height: 92%;
+    height: 92%;
+}
+
+#navLogo {
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.tooltip {
+    position: fixed;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: rgb(153, 153, 153);
+  color: white;
+  padding: 15px;
+  bottom: 0px;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+    
+.speech-bubble {
+    position: relative;
+    background: #57b7e7;
+    padding:5px;
+    border-radius: .4em;
+}
+
+.speech-bubble:after {
+    content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top-color: #57b7e7;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -5px;
+	margin-bottom: -10px;
+}
+.name {
+    padding-top: 4px;
+    text-align: center;
+    font-size: 15px;
+}
+.date, href {
+    text-align: center;
+    font-size: 12px;
+}
+.project, #newFolder, #newProject {
+    cursor: pointer;
+}
+.from {
+    text-align: right;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+#projectsWindow {
+    padding: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+input[type=submit] {
+    background-color: #57b7e7;
+    color: white;
+    padding: 5px 12px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+input[type=text] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/*.navbar a {*/
+.navelem{
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    height: 50px;
+    padding: 10px 0;
+}
+
+#uploadNewVersion {
+    margin-top: 18px;
+    margin-left: 18px;
+    height: 25px;
+    width: auto;
+    cursor: pointer;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+a {
+    color: white;
+}
+
+a:hover 
+{
+     color: white; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+
+.dropdown .dropbtn, .login {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus, .login:hover {
+    background-color: #555;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content div {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+.checkbox {
+    margin-bottom: 20px;
+}
+/* The container for the checkbox */
+.checkboxContainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkboxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    outline: 1px solid #555;
+}
+.checkbox label {
+    padding-left: 40px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkboxContainer:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkboxContainer input:checked ~ .checkmark {
+    background-color: #57b7e7;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkboxContainer input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkboxContainer .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#currentversion {
+    color: rgb(101, 148, 101);
+}
+
+/* For the tasks dropdown */
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+#redDot {
+    background-color: red;
+}
+#yellowDot {
+    background-color: yellow;
+}
+#greenDot {
+    background-color: green;
+}

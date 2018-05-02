@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<title>Stoplight</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="style.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="projectPage.js"></script>
+</head>
+<body>
+
+
+<div class="navbar">
+    <a href="allProjectsPage.html" data-toggle="tooltip" data-placement="bottom" title="Back to homepage" class="navelem"><img src="Images/logo.png" id="navLogo"></a> <!-- <a href="#home"> tacks url..#home to end -->
+    <!--<a href="allProjectsPage.html"><span class="glyphicon glyphicon-menu-left"></span></a>-->
+	<span data-toggle="modal" data-target="#newFolderModal">
+    	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Create New Folder" class="navelem"><img src="Images/folderwhite.png" class="center" alt="Add New Folder" ></a>
+	</span>
+	<span data-toggle="modal" data-target="#uploadFileModal">
+    	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Upload New File" class="navelem"class="navelem"><img src="Images/uploadwhite.png" class="center" alt="Upload New File" ></a>
+	</span>
+    <div class="login navbar-right">
+        <a href="#" class="login"><span class="glyphicon glyphicon-user"></span> mts219@lehigh.edu </a>
+    </div>
+</div>
+
+<div class="container-fluid fill">
+  	<div class="row content fill">
+    	<div class="col-sm-3 col-sm-push sidenav hidden-xs">
+      		<h2>Finance Management</h2>
+      		<div>
+        		<h4 style="margin-top: 30px">Communication Hub</h4>
+      		</div>
+      		<div class="well">
+            	<div>
+                	<div class="speech-bubble">Working on expense report</div>
+                	<div class="from">jnm219@lehigh.edu</div>
+            	</div>
+            	<div>
+                	<div class="speech-bubble">Okay. Let me know when you're done so I can send it in</div>
+                	<div class="from">rsg219@lehigh.edu</div>
+            	</div>
+      		</div>
+      		<div>
+          		<form>    <!-- <form action="/action_page.php"> goes to page action_page-->
+            		<input type="text" style="width:100%">
+            		<div class="row">
+                		<input type="submit" value="Send" style="float:right; margin-right:15px;">
+            		</div>
+          		</form>
+      		</div>
+    	<br>
+		</div>
+    	
+    	<div class="col-sm-7" id="foldersAndFiles">
+        <br>
+    		<div class="row" id="folders">
+        		<div class="col-sm-3">
+          			<div class="well">
+						<div class="folder" id="0">
+            				<a href="#" data-toggle="tooltip" title="Green Folder"><img src="Images/foldergreen.png" class="center" alt="Green Folder"></a>
+							<div class="name">Legal Documents</div>
+						</div>
+          			</div>
+        		</div>
+        		<div class="col-sm-3">
+          			<div class="well">
+            			<a href="filePage.html" data-toggle="tooltip" title="Yellow File"><img src="Images/fileyellow.png" class="center" alt="Yellow File"></a>
+            			<div class="name">Expense Report</div>
+          			</div>
+        		</div>
+        		<div class="col-sm-3">
+          			<div class="well">
+            			<a href="#" data-toggle="tooltip" title="Red File"><img src="Images/filered.png" class="center" alt="Red File"></a>
+            			<div class="name">List of Volunteers</div>
+          			</div>
+        		</div>
+        		<div class="col-sm-3">
+          			<div class="well">
+            			<a href="#" data-toggle="tooltip" title="Green File"><img src="Images/filegreen.png" class="center" alt="Green File"></a>
+            			<div class="name">Weekly Summary</div>
+          			</div>
+				</div>
+			</div>
+		</div>
+
+    <!--Tasks-->
+    <div class="col-sm-2 col-sm-pull sidenav hidden-xs">
+        <div>
+            <h4 style="margin-top: 30px">Tasks</h4>
+        </div>
+        <div class="well">
+            <div class="" id="taskslist">
+                <form>
+                    <div class="checkbox">
+                        <label class="checkboxContainer">
+                            <input type="checkbox" value="">
+                        	Plan team retreat
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="checkboxContainer">
+                            <input type="checkbox" value="">
+                        	Set up meeting with Management team
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--Completed Tasks-->
+        <div>
+            <h4 style="margin-top: 30px">Completed Tasks</h4>
+        </div>
+        <div class="well">
+            <div id="completedtaskslist">
+                <form id="completedtaskslist">
+                    <div class="checkbox">
+                        <label class="checkboxContainer">
+                            <input type="checkbox" value="" checked>
+							Set up meeting with client
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <form>    
+                <input type="text" style="width:100%">
+                <div class="row">
+                    <input type="submit" value="Create" style="float:right; margin-right:15px;">
+                </div>
+            </form>
+        </div>
+        <br>
+	</div>
+
+
+	</div>
+</div>
+
+<!-- New Folder Modal -->
+<div id="newFolderModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Create New Folder</h4>
+			</div>
+			<div class="modal-body">
+				<form >
+					<div class="form-group">
+						<label for="folderName">Folder name:</label>
+						<input type="text" class="form-control" id="folderName">
+						<br>
+						<label for="folderStatus">Select status:</label>
+						<br>
+						<input type="radio" value="red" checked>  lots to do<br>
+						<input type="radio" value="yellow">  halfway there<br>
+						<input type="radio" value="green">  no work needed<br>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" id="submitnewfolder" data-dismiss="modal">Submit</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Upload File Modal -->
+<div id="uploadFileModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Upload New File</h4>
+			</div>
+			<div class="modal-body">
+				<!--<form id="uploadFile" enctype="multipart/form-data" method="POST" action="http://localhost:3000/upload/file">-->
+				<form id="uploadFileForm"> 
+					<input id="fileupload" name="myfile" type="file"/>
+					<input id="filename" type="text" />
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" id="fileuploadbutton" class="btn btn-default" data-dismiss="modal">Submit</button>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="container-fluid text-center">
+    <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+</footer>
+
+
+</body>
+</html>

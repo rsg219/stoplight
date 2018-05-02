@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Stoplight</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="filePage.js"></script>
+  <script type="text/javascript" src="projectPage.js"></script>
+</head>
+<body>
+
+
+<div class="navbar">
+    <a href="allProjectsPage.html" data-toggle="tooltip" data-placement="bottom" title="Back to homepage" class="navelem"><img src="Images/logo.png" id="navLogo"></a> <!-- <a href="#home"> tacks url..#home to end -->
+    <!--<a href="allProjectsPage.html"><span class="glyphicon glyphicon-menu-left"></span></a>-->
+    <a href="projectPage.html" data-toggle="tooltip" title="Back to project" class="navelem"><img src="Images/backarrowwhite.png" style="height: 25px; padding-top:3px;"></a>
+	<!--<span data-toggle="modal" data-target="#uploadNewVersion">-->
+    <div class="login navbar-right">
+        <a href="#" class="login"><span class="glyphicon glyphicon-user"></span> mts219@lehigh.edu </a>
+    </div>
+</div>
+
+<div class="container-fluid fill">
+  <div class="row content fill">
+      <!--Communication Hub-->
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h2>Finance Management</h2>
+      <div>
+        <h4 style="margin-top: 30px">Communication Hub</h4>
+      </div>
+      <div class="well">
+            <div>
+                <div class="speech-bubble">Working on expense report</div>
+                <div class="from">jnm219@lehigh.edu</div>
+            </div>
+            <div>
+                <div class="speech-bubble">Okay. Let me know when you're done so I can send it in</div>
+                <div class="from">rsg219@lehigh.edu</div>
+            </div>
+      </div>
+      <div>
+          <form>    <!-- <form action="/action_page.php"> goes to page action_page-->
+            <input type="text" style="width:100%">
+            <div class="row">
+                <input type="submit" value="Send" style="float:right; margin-right:15px;">
+            </div>
+          </form>
+      </div>
+    <br>
+    </div>
+    
+    <!--Body-->
+    <div class="col-sm-7" id="foldersAndFiles">
+        <h3 style="float:left;">Expense Report Versions</h3>
+        <img src="Images/uploadgrey32.png" id="uploadNewVersion" alt="Upload New Version">
+
+        <br>
+    <div class="row" id="files" style="clear: left;">
+        <div class="col-sm-3" id="currentversion">
+          <div class="well">
+            <a href="#" data-toggle="tooltip" title="Click to download file"><img src="Images/fileyellow.png" class="center" alt="Yellow File"></a>
+            <div class="name">Expense Report</div>
+            <div class="date"></div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <a href="#" data-toggle="tooltip" title="Click to download file"><img src="Images/fileyellow.png" class="center" alt="Yellow File"></a>
+            <div class="name">Expense Report</div>
+            <div class="date"></div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <a href="#" data-toggle="tooltip" title="Click to download file"><img src="Images/fileyellow.png" class="center" alt="Yellow File"></a>
+            <div class="name">Expense Report</div>
+            <div class="date"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Tasks-->
+    <div class="col-sm-2 sidenav hidden-xs">
+        <div>
+            <h4 style="margin-top: 30px">Tasks</h4>
+        </div>
+        <div class="well">
+            <div class="" id="taskslist">
+                <form>
+                    <div class="checkbox">
+                        <label class="checkboxContainer">
+                            <input type="checkbox" value="">
+                            Review expense report
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="checkboxContainer">
+                            <input type="checkbox" value="">
+                            Send report to supervisor
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="checkboxContainer">
+                            <input type="checkbox" value="">
+                            Email accountant
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--Completed Tasks-->
+        <div>
+            <h4 style="margin-top: 30px">Completed Tasks</h4>
+        </div>
+        <div class="well">
+            <div id="completedtaskslist">
+                <form id="completedtaskslist">
+                    <div class="checkbox">
+                        <label class="checkboxContainer">
+                            <input type="checkbox" value="" checked>
+                            File taxes
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <form>    
+                <input type="text" style="width:100%">
+                <div class="row">
+                    <input type="submit" value="Create" style="float:right; margin-right:15px;">
+                </div>
+            </form>
+        </div>
+        <br>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+    <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+</footer>
+
+
+</body>
+</html>
